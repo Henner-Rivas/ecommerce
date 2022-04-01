@@ -24,6 +24,7 @@ export default function Navbar() {
             aria-label="menu"
             sx={{ mr: 2 }}
           >
+              
          <ImgLogo src={logo} alt="" />
            </IconButton>
           <Typography variant="h6" color="textPrimary" component="p" sx={{ flexGrow: 1 }}>

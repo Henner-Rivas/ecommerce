@@ -11,7 +11,6 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { AddShoppingCart } from '@mui/icons-material';
 import accounting from 'accounting'
-
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
   return <IconButton {...other} />;
@@ -23,17 +22,16 @@ const ExpandMore = styled((props) => {
   }),
 }));
 
-export default function Product() {
+export default function Product({product}) {
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
-
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardHeader
-      title="Shoes"
+      title={product.name}
       subheader="in Stock"
 
         action={
@@ -43,7 +41,7 @@ export default function Product() {
             color='textSecondary'
            >
              
-         { accounting.formatMoney(50)  }
+         { accounting.formatMoney(product.price)  }
            </Typography>
             
         }
@@ -51,20 +49,19 @@ export default function Product() {
       <CardMedia
         component="img"
         height="194"
-        image="https://img.freepik.com/foto-gratis/botas-calcetin-terciopelo-purpura-primer-plano_53876-102950.jpg?w=740&t=st=1648783372~exp=1648783972~hmac=a8fa1c0e6ef18bea2654af40a5956cb6bdd99c50839b610de49a9664580ad6e8"
+        image={product.image}
         alt="Paella dish"
       />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-          This impressive paella is a perfect party dish and a fun meal to cook
-          together with your guests. 
+      { product.productType} 
         </Typography> 
       </CardContent>
       <CardActions disableSpacing>
         <IconButton aria-label="add to favorites">
           <AddShoppingCart />
         </IconButton>
-   {Array(5)
+   {Array(product.rating)
       .fill()
       .map((_,i)=>(<p>&#11088;</p>)
       )}
@@ -81,8 +78,7 @@ export default function Product() {
         <CardContent>
           <Typography paragraph>Method:</Typography>
           <Typography paragraph>
-            Heat 1/2 cup of the broth in a pot until simmering, add saffron and set
-            aside for 10 minutes.
+         { product.description}
           </Typography>
         
         </CardContent>
