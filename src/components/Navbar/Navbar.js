@@ -9,6 +9,7 @@ import logo from '../assets/logo3.jpg'
 import { ImgLogo } from './styles';
 import { ShoppingCart } from '@mui/icons-material';
 import { Badge } from '@mui/material';
+import { Link } from 'react-router-dom';
 export default function Navbar() {
 
     
@@ -17,6 +18,7 @@ export default function Navbar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="fixed">
         <Toolbar>
+          <Link to='/' >
           <IconButton
             size="large"
             edge="start"
@@ -27,6 +29,9 @@ export default function Navbar() {
               
          <ImgLogo src={logo} alt="" />
            </IconButton>
+          
+          </Link>
+
           <Typography variant="h6" color="textPrimary" component="p" sx={{ flexGrow: 1 }}>
             Hello user
           </Typography>
@@ -36,13 +41,17 @@ export default function Navbar() {
           </Button>
             </div>
  
+<Link to="/checkout">
 
-          <IconButton aria-label='show cart-items' color="primary">
+<IconButton aria-label='show cart-items' color="primary">
            <Badge badgeContent={2} color="secondary">
             <ShoppingCart  />
            </Badge>
             
               </IconButton >
+
+</Link>
+   
 
         </Toolbar>
       </AppBar>

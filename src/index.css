@@ -34,3 +34,19 @@ code {
 .css-1t29gy6-MuiToolbar-root{
 padding-left: 0 !important;
 }
+.CardActionsCkeckout{
+  display: flex;
+  justify-content: space-between;
+}
+
+.estrellas{
+  display: flex;
+}
+
+.total{
+  display:"flex";
+ flex-direction:column;
+ justify-content: center;
+ align-items: center;
+ height: 20vh;
+}

@@ -22,7 +22,7 @@ const ExpandMore = styled((props) => {
   }),
 }));
 
-export default function Product({product}) {
+export default function Product({product,addToCarts}) {
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
@@ -57,8 +57,11 @@ export default function Product({product}) {
       { product.productType} 
         </Typography> 
       </CardContent>
+     
+
+
       <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
+        <IconButton aria-label="add to cart" onClick={addToCarts}>
           <AddShoppingCart />
         </IconButton>
    {Array(product.rating)
@@ -78,7 +81,7 @@ export default function Product({product}) {
         <CardContent>
           <Typography paragraph>Method:</Typography>
           <Typography paragraph>
-         { product.description}
+         {product.description}
           </Typography>
         
         </CardContent>
