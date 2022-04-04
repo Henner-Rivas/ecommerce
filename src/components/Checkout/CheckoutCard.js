@@ -10,14 +10,13 @@ import DeleteRoundedIcon from '@mui/icons-material/DeleteRounded';
 import accounting from 'accounting'
 
 
-export default function CheckoutCard({product,deleteAll}) {
-
-  console.log("🚀 ~ file: CheckoutCard.js ~ line 14 ~ CheckoutCard ~ product", product)
+export default function CheckoutCard({product,deleteAll,deleteOne,addToOtherCart}) {
+   let {name,price, quantity,productType,image}= product;
  
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 250 }}>
       <CardHeader
-      title={product.name}
+      title={name}
       subheader="in Stock"
 
         action={
@@ -27,7 +26,7 @@ export default function CheckoutCard({product,deleteAll}) {
             color='textSecondary'
            >
              
-         { accounting.formatMoney(product.price)  }
+         { accounting.formatMoney(price)  }
            </Typography>
             
         }
@@ -35,22 +34,22 @@ export default function CheckoutCard({product,deleteAll}) {
       <CardMedia
         component="img"
         height="194"
-        image={product.image}
+        image={image}
         alt="Paella dish"
       />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-      { product.productType} 
+      { productType} 
         </Typography> 
       </CardContent>
       <div className='addAndDelete'>
-         <IconButton>
+         <IconButton onClick={deleteOne}>
            -
          </IconButton>
          <IconButton>
-           <h5>0</h5>
+           <h5>{quantity}</h5>
          </IconButton>
-         <IconButton>
+         <IconButton onClick={addToOtherCart}>
        +
 
          </IconButton>

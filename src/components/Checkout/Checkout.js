@@ -8,10 +8,12 @@ import Total from '../Total';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { delFromCart } from '../../actions/ShoppinCartActions';
+import {addTocart} from '../../actions/ShoppinCartActions'
 
 export default function Checkout() {
    const state= useSelector(state=>state)
-  let {cart}= state.shopping
+  let {cart}= state.shopping;
+     
     const dispatch=useDispatch()
   return (
     <Box sx={{ flexGrow:1 ,padding:4}} >
@@ -26,7 +28,12 @@ export default function Checkout() {
        {
        cart.map(product=>(
         <Grid   item xs={12} sm={6} md={4} lg={3}>
-      <CheckoutCard product={product} key={product.id} deleteAll={()=> dispatch(delFromCart(product.id,true))}/>
+      <CheckoutCard product={product} key={product.id}
+      deleteOne={()=> dispatch(delFromCart(product.id))}
+
+      addToOtherCart={()=> dispatch(addTocart(product.id))} 
+
+      deleteAll={()=> dispatch(delFromCart(product.id,true))}/>
         </Grid>
        ))
        }  
