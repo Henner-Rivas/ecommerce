@@ -14,7 +14,7 @@ export default function CheckoutCard({product,deleteAll,deleteOne,addToOtherCart
    let {name,price, quantity,productType,image}= product;
  
   return (
-    <Card sx={{ maxWidth: 250 }}>
+    <Card sx={{ maxWidth: 340 }}>
       <CardHeader
       title={name}
       subheader="in Stock"

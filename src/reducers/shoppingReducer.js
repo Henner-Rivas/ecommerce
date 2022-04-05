@@ -3,6 +3,7 @@ import {
     CLEAR_CART,
     REMOVE_ALL_FROM_CART,
     REMOVE_ONE_FROM_CART,
+    SET_USER
   } from "../types";
   
   export const initialState = {
@@ -51,7 +52,8 @@ import {
         },
       ]
       ,
-    cart: [ ],
+    cart: [],
+    user:[],
   };
   export const getCartTotalPrice=(cart)=>{
 /*     cart?.reduce((cantidad,item) =>item.price + cantidad ,0)
@@ -115,6 +117,12 @@ import {
           ...state,
           cart: state.cart.filter((item) => item.id !== action.payload),
         };
+      }
+      case SET_USER:{
+        return {
+          ...state,
+          user: action.payload
+        }
       }
       case CLEAR_CART:
         return initialState;

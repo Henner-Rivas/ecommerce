@@ -4,7 +4,8 @@ import Navbar from './components/Navbar/Navbar';
 import Checkout from './components/Checkout/Checkout';
 import { Routes, Route } from "react-router-dom";
 import SignIn from './sing/signIn';
-import SignUp from './sing/signUp';
+import { SignUp } from './sing/signUp';
+import CheckoutForm from './components/CheckoutForm/CheckoutForm';
 
 function App() {
   return (
@@ -13,9 +14,10 @@ function App() {
       <Routes>
       <Route path="/" element={  <Products />} />
         <Route path="/checkout" element={ <Checkout />} />
-        <Route path="/singin" element={ <SignIn/>} />
+        <Route path="/signin"  element={ <SignIn/>} />
         <Route path="/signup" element={ <SignUp/>} />
-
+        <Route path="/checkout-page" element={ <CheckoutForm/>} />
+          
       </Routes>/
     
    

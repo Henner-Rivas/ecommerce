@@ -13,10 +13,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import {Link as LinkRouter,useHistory} from 'react-router-dom' 
-/* import {auth} from './../firebase.js'
- */
-import {auth} from './firebase.js'
-
+import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
@@ -32,19 +29,16 @@ function Copyright(props) {
 
 const theme = createTheme();
 
-export default function SignUp() {
+export  function SignUp() {
   
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   
-  const signup=(e)=>{
-    e.preventDefault()
+  
+ 
 
-    
-   
-      
-  }
+
     return (
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
@@ -123,7 +117,6 @@ export default function SignUp() {
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
-              onClick={signup}
             >
               Sign Up
             </Button>
