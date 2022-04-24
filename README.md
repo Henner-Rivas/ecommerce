@@ -11,7 +11,7 @@ Puedes ver el deploy de este proyecto aqui:
 
 #### Pantalla de carrio de compras
 
-![Pantalla Carrito"](https://ibb.co/7tDLJXf)
+![checkout](https://i.ibb.co/Zzr76Vj/checkout.png)
 
 
 
