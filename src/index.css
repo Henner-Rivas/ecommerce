@@ -50,3 +50,10 @@ padding-left: 0 !important;
  align-items: center;
  height: 20vh;
 }
+.css-t1k10y{
+  background: white !important;
+  box-shadow: 1px 0px 9px 3px #ccc !important;
+}
+.css-1nobzit-MuiGrid-root {
+  border-top: 2px solid black !important;
+}

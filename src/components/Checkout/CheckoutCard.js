@@ -62,7 +62,7 @@ export default function CheckoutCard({product,deleteAll,deleteOne,addToOtherCart
       {Array(product.rating)
 
       .fill()
-      .map((_,i)=>(<p>&#11088;</p>)
+      .map((_,i)=>(<p key={i}>&#11088;</p>)
       )}
  </div>
 

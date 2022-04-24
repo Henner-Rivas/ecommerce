@@ -3,7 +3,9 @@ import {
     CLEAR_CART,
     REMOVE_ALL_FROM_CART,
     REMOVE_ONE_FROM_CART,
-    SET_USER
+    SET_USER,
+    SET_SHIPPINGDATA,
+    SET_PAYMENT_MESSAGE
   } from "../types";
   
   export const initialState = {
@@ -54,6 +56,8 @@ import {
       ,
     cart: [],
     user:[],
+    shoppingData:{},
+    paymentMessaje:""
   };
   export const getCartTotalPrice=(cart)=>{
 /*     cart?.reduce((cantidad,item) =>item.price + cantidad ,0)
@@ -124,10 +128,23 @@ import {
           user: action.payload
         }
       }
+      case SET_SHIPPINGDATA:{
+        return{
+          ...state,
+          shoppingData:action.payload
+        }
+      }
+      case SET_PAYMENT_MESSAGE:{
+        return{
+          ...state,
+          paymentMessaje:action.payload
+        }
+      }
       case CLEAR_CART:
         return initialState;
-      default:
+        
+        default:
         return state;
+      }
     }
-  }
   

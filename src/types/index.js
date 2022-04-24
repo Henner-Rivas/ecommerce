@@ -6,3 +6,7 @@ export const CLEAR_CART='CLEAR_CART'
 
 // user
 export const SET_USER='SET_USER'
+
+export const SET_SHIPPINGDATA='SET_SHIPPINGDATA'
+
+export const SET_PAYMENT_MESSAGE="SET_PAYMENT_MESSAGE"

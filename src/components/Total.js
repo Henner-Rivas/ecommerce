@@ -2,32 +2,14 @@ import React from 'react'
 import { accounting  } from 'accounting'
 import {Button} from '@mui/material'
 import { getCantidadCart, getCartTotalPrice } from '../reducers/shoppingReducer'
-import { useDispatch, useSelector } from 'react-redux';
+import {  useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-/* import { makeStyles } from '@mui/styles';
- */
-/* const theme = createTheme();
-
-const useStyles= makeStyles((theme)=>({
-    root:{
-        display:"flex",
-        flexDirection:"column",
-        justifyContent:"center",
-        alingItems:"center",
-        height:"20vh"
-    },
-    button:{
-        marginTop:"2rem"
-    }
-})) */
 const Total = () => {
-/*     const classes=useStyles();
- */
+
        const state= useSelector(state=> state)
 
        let {cart}= state.shopping;
-       console.log("🚀 ~ file: Total.js ~ line 29 ~ Total ~ cart", cart)
 return (
    
     <div className="total" >
