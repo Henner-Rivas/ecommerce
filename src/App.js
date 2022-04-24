@@ -6,7 +6,7 @@ import { Routes, Route } from "react-router-dom";
 import SignIn from './sing/signIn';
 import { SignUp } from './sing/signUp';
 import CheckoutForm from './components/CheckoutForm/CheckoutForm';
-
+import Error404 from './components/404/index'
 function App() {
   return (
     <div className="App">
@@ -17,8 +17,9 @@ function App() {
         <Route path="/signin"  element={ <SignIn/>} />
         <Route path="/signup" element={ <SignUp/>} />
         <Route path="/checkout-page" element={ <CheckoutForm/>} />
-          
-      </Routes>/
+        <Route path="*" element={ <Error404/> } />
+
+      </Routes>
     
    
      </div>

@@ -2,7 +2,6 @@ const express= require('express')
 const Stripe= require('stripe')
 
 const cors= require('cors');
-const { StraightTwoTone } = require('@mui/icons-material');
 
 const stripe= new Stripe("sk_test_51Jdbx8Kp0nVpO7XB7Oa62BNclUBFgqLuUX7ErgnMIFr3S3QLeemzFENa8aklhzdWHJhkD9tHHdIXXFCkfW7U0TC600LQt8Pdkt")
 const app= express();
