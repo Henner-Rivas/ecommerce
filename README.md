@@ -2,7 +2,7 @@
 
 La página web de continuación simula ser un tienda online que  contiene  carrito de compras, en la cuál eliges de una cierta cantidad de productos para posteriormente comprarlas.
 
-Puedes ver el deploy de este proyecto aqui: 
+Puedes ver el deploy de este proyecto aqui:  https://idyllic-meerkat-79f4df.netlify.app/
 
 * Este proyecto personal  en el fronted  está contruido con Material UI,React, Redux
 * Tambien cuenta con algo de backend, se prodra hacer un login Google, se hizo uso de la autenticacion de fisebase.
